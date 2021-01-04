@@ -19,4 +19,8 @@ Baseline model has been implemented.
 
 ## Re-id Performance
 
+The model is evaluated on 1 GTX1080 GPU with all query and gallery data in VeRi. Evaluation tools are from fast-reid tool box.
+
+Performance on other datasets may be evaluated in the future.
+
 ![baseline_performance](./baseline_performance.png)
