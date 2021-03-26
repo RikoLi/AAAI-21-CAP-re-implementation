@@ -15,14 +15,21 @@ In this branch, the full model trained with intra/inter-camera loss is completed
 
 Similar to the steps in baseline model training. Start training with the shell script.
 
-```./start_train.sh```
+```bash
+./start_train.sh
+```
 
 Or you can directly start it with python by
 
-```python train_full_model.py --conf ./my_config.yml --gpu_ids 0,1,2,3```
+```bash
+python train_full_model.py --conf ./my_config.yml --gpu_ids 0,1,2,3
+```
 
 ### Evaluation
 
 Start evaluation with the shell script.
 
-```./start_eval.sh```
+```bash
+./start_eval.sh
+```
+
