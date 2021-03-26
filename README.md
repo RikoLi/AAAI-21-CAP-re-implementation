@@ -1,5 +1,3 @@
-**Currently, this work has not been finally completed with some code refinement work to do.**
-
 This project is a re-implementation work of AAAI 2021 paper *Camera-aware Proxies for Unsupervised Person Re-ID*, with the dataset changed to [VeRi](https://vehiclereid.github.io/VeRi/).
 
 ## Prerequisites
@@ -17,15 +15,18 @@ Current branch: baseline
 - [x] Cluster-balanced sampling
 - [x] Warm-up LR scheduler
 
-Baseline model has been implemented.
+For full model with intra/inter-camera loss, check for [final model branch](https://github.com/RikoLi/camera-aware-re-implementation/tree/final-model).
 
 ## Re-id Performance
 
-The model is evaluated on 1 GTX1080 GPU with all query and gallery data in VeRi. Evaluation tools are from fast-reid tool box.
+The model is evaluated on 1 GTX1080 GPU with all query and gallery data in VeRi. Evaluation tools are from fast-reid tool box. Performance on other datasets may be evaluated in the future.
 
-Performance on other datasets may be evaluated in the future.
 
-![baseline_performance](./baseline_performance.png)
+Model | mAP | Rank-1 Accuracy
+--    | --  | --
+baseline | 0.285 | 0.657
+intra-cam loss only | 0.436 | 0.833
+final model (intra/inter-cam loss) | **0.445** | **0.883**
 
 ## Usage
 
@@ -104,7 +105,7 @@ Or you can use other configs and GPU assignments by
 python train.py --conf ./my_config.yml --gpu_ids 0,1,2,3 # seperate with "," when using more than one GPU
 ```
 
-You can continue training from the latest checkpoint by adding `--is_continue` or edit and run `continue_train.sh`. See `settings.py` for argument details.
+You can continue training from the **latest** checkpoint by adding `--is_continue` or edit and run `continue_train.sh`. See `settings.py` for argument details.
 
 ### Evaluation
 
