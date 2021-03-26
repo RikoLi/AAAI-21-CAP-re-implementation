@@ -1,0 +1,46 @@
+# Resnet50 model for VeRi dataset
+
+# model settings
+MODEL:
+  BACKBONE:
+    PRETRAIN: True
+    PRETRAIN_PATH: False
+    LAST_STRIDE: 1
+    NORM: "BN"
+    WITH_IBN: False
+    WITH_SE: False
+    WITH_NL: False
+    DEPTH: "50x"
+    FEAT_DIM: 2048
+
+# dataset settings
+DATASET:
+  PATH: "/home/ljc/datasets"
+
+# training settings
+TRAIN:
+  EPOCHS: 50
+  BATCHSIZE: 32
+  LR: 0.00035
+  SAVE_INTERVAL: 10
+  PRETRAINED_PATH: ""
+  CHECKPOINT_PATH: "/home/ljc/works/fast-reid/projects/learn-fastreid/checkpoints/12.11-1335-person-market"
+  LOG_PATH: "/home/ljc/works/fast-reid/projects/learn-fastreid/logs/12.11-1335-person-market"
+  CLUSTER_VIS_PATH: ""
+
+# evaluation settings
+TEST:
+  PRETRAINED_MODEL: "/home/ljc/works/fast-reid/projects/learn-fastreid/checkpoints/12.11-1335-person-market/backbone-epoch-40.pth"
+  AQE:
+    ENABLED: True
+    QE_TIME: 1
+    QE_K: 10
+    ALPHA: 3.0
+  METRIC: "cosine"
+  # default re-ranking configs
+  RERANK:
+    ENABLED: True
+    K1: 20
+    K2: 6
+    LAMBDA: 0.3
+  ROC_ENABLED: True
