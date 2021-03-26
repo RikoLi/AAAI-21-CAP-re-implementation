@@ -1,1 +1,27 @@
-The full model with intra/inter-camera loss has been completed.
+In this branch, the full model trained with intra/inter-camera loss is completed.
+
+## TODOs
+
+- [x] Proxy label assignment
+- [x] Project rebuild
+- [x] Proxy memory bank
+- [x] Intra-camera loss
+- [x] Inter-camera loss
+
+## Usage
+
+### Training
+
+Similar to the steps in baseline model training. Start training with the shell script.
+
+```./start_train.sh```
+
+Or you can directly start it with python by
+
+```python train_full_model.py --conf ./my_config.yml --gpu_ids 0,1,2,3```
+
+### Evaluation
+
+Start evaluation with the shell script.
+
+```./start_eval.sh```
