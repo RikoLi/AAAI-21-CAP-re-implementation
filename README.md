@@ -1,4 +1,9 @@
-This project is a re-implementation work of AAAI 2021 paper *Camera-aware Proxies for Unsupervised Person Re-ID*, with the dataset changed to [VeRi](https://vehiclereid.github.io/VeRi/).
+# CAP Re-implementation
+
+This project is a re-implementation work of AAAI 2021 paper *Camera-aware Proxies for Unsupervised Person Re-ID*, with the dataset changed to [VeRi](https://vehiclereid.github.io/VeRi/). 
+
+The official implementation version is open-sourced at [CAP-master](https://github.com/Terminator8758/CAP-master
+).
 
 ## Prerequisites
 
@@ -26,7 +31,13 @@ Model | mAP | Rank-1 Accuracy
 --    | --  | --
 baseline | 28.5% | 65.7%
 intra-cam loss only | 43.6% | 83.3%
-final model (intra/inter-cam loss) | **44.5%** | **88.3%**
+final model (this work) | **44.5%** | **88.3%**
+final model (official) | 40.6% | 87.0%
+
+- baseline: The performance of the pure clustering-based method for pseudo label assignment with cluster-balanced sampling.
+- intra-cam loss only: The performance of the method using only intra-camera loss and proxy-balanced sampling.
+- final model (this work): The performance of the re-implementation work using both intra-camera and inter-camera loss and proxy-balanced sampling.
+- final model (official): The performance of the official implementation of the final model.
 
 ## Usage
 
