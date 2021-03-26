@@ -5,6 +5,7 @@ In this branch, the full model trained with intra/inter-camera loss is completed
 - [x] Proxy label assignment
 - [x] Project rebuild
 - [x] Proxy memory bank
+- [x] Proxy-balanced sampling
 - [x] Intra-camera loss
 - [x] Inter-camera loss
 
