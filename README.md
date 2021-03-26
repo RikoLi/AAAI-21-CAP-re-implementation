@@ -24,9 +24,9 @@ The model is evaluated on 1 GTX1080 GPU with all query and gallery data in VeRi.
 
 Model | mAP | Rank-1 Accuracy
 --    | --  | --
-baseline | 0.285 | 0.657
-intra-cam loss only | 0.436 | 0.833
-final model (intra/inter-cam loss) | **0.445** | **0.883**
+baseline | 28.5% | 65.7%
+intra-cam loss only | 43.6% | 83.3%
+final model (intra/inter-cam loss) | **44.5%** | **88.3%**
 
 ## Usage
 
